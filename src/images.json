@@ -1,0 +1,152 @@
+[
+    {
+        "id": 1,
+        "alt": "Dr. Mario",
+        "src": "https://www.smashbros.com/assets_v2/img/fighter/thumb_a/dr_mario.png",
+        "clicked": false
+    },
+    {
+        "id": 2,
+        "alt": "Mario",
+        "src": "https://www.smashbros.com/assets_v2/img/fighter/thumb_a/mario.png",
+        "clicked": false
+    },
+    {
+        "id": 3,
+        "alt": "Luigi",
+        "src": "https://www.smashbros.com/assets_v2/img/fighter/thumb_a/luigi.png",
+        "clicked": false
+    },
+    {
+        "id": 4,
+        "alt": "Bowser",
+        "src": "https://www.smashbros.com/assets_v2/img/fighter/thumb_a/bowser.png",
+        "clicked": false
+    },
+    {
+        "id": 5,
+        "alt": "Peach",
+        "src": "https://www.smashbros.com/assets_v2/img/fighter/thumb_a/peach.png",
+        "clicked": false
+    },
+    {
+        "id": 6,
+        "alt": "Yoshi",
+        "src": "https://www.smashbros.com/assets_v2/img/fighter/thumb_a/yoshi.png",
+        "clicked": false
+    },
+    {
+        "id": 7,
+        "alt": "Donkey Kong",
+        "src": "https://www.smashbros.com/assets_v2/img/fighter/thumb_a/donkey_kong.png",
+        "clicked": false
+    },
+    {
+        "id": 8,
+        "alt": "Captain Falcon",
+        "src": "https://www.smashbros.com/assets_v2/img/fighter/thumb_a/captain_falcon.png",
+        "clicked": false
+    },
+    {
+        "id": 9,
+        "alt": "Ganondorf",
+        "src": "https://www.smashbros.com/assets_v2/img/fighter/thumb_a/ganondorf.png",
+        "clicked": false
+    },
+    {
+        "id": 10,
+        "alt": "Falco",
+        "src": "https://www.smashbros.com/assets_v2/img/fighter/thumb_a/falco.png",
+        "clicked": false
+    },
+    {
+        "id": 11,
+        "alt": "Fox",
+        "src": "https://www.smashbros.com/assets_v2/img/fighter/thumb_a/fox.png",
+        "clicked": false
+    },
+    {
+        "id": 12,
+        "alt": "Ness",
+        "src": "https://www.smashbros.com/assets_v2/img/fighter/thumb_a/ness.png",
+        "clicked": false
+    },
+    {
+        "id": 13,
+        "alt": "Ice Climbers",
+        "src": "https://www.smashbros.com/assets_v2/img/fighter/thumb_a/ice_climbers.png",
+        "clicked": false
+    },
+    {
+        "id": 14,
+        "alt": "Kirby",
+        "src": "https://www.smashbros.com/assets_v2/img/fighter/thumb_a/kirby.png",
+        "clicked": false
+    },
+    {
+        "id": 15,
+        "alt": "Samus",
+        "src": "https://www.smashbros.com/assets_v2/img/fighter/thumb_a/samus.png",
+        "clicked": false
+    },
+    {
+        "id": 16,
+        "alt": "Zelda",
+        "src": "https://www.smashbros.com/assets_v2/img/fighter/thumb_a/zelda.png",
+        "clicked": false
+    },
+    {
+        "id": 17,
+        "alt": "Link",
+        "src": "https://www.smashbros.com/assets_v2/img/fighter/thumb_a/link.png",
+        "clicked": false
+    },
+    {
+        "id": 18,
+        "alt": "Young Link",
+        "src": "https://www.smashbros.com/assets_v2/img/fighter/thumb_a/young_link.png",
+        "clicked": false
+    },
+    {
+        "id": 19,
+        "alt": "Pichu",
+        "src": "https://www.smashbros.com/assets_v2/img/fighter/thumb_a/pichu.png",
+        "clicked": false
+    },
+    {
+        "id": 20,
+        "alt": "Pikachu",
+        "src": "https://www.smashbros.com/assets_v2/img/fighter/thumb_a/pikachu.png",
+        "clicked": false
+    },
+    {
+        "id": 21,
+        "alt": "Jigglypuff",
+        "src": "https://www.smashbros.com/assets_v2/img/fighter/thumb_a/jigglypuff.png",
+        "clicked": false
+    },
+    {
+        "id": 22,
+        "alt": "Mewtwo",
+        "src": "https://www.smashbros.com/assets_v2/img/fighter/thumb_a/mewtwo.png",
+        "clicked": false
+    },
+    {
+        "id": 23,
+        "alt": "Mr. Game & Watch",
+        "src": "https://www.smashbros.com/assets_v2/img/fighter/thumb_a/mr_game_and_watch.png",
+        "clicked": false
+    },
+    {
+        "id": 24,
+        "alt": "Marth",
+        "src": "https://www.smashbros.com/assets_v2/img/fighter/thumb_a/marth.png",
+        "clicked": false
+    },
+    {
+        "id": 25,
+        "alt": "Roy",
+        "src": "https://www.smashbros.com/assets_v2/img/fighter/thumb_a/roy.png",
+        "clicked": false
+    }
+]

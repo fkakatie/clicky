@@ -1,23 +1,27 @@
 import React, { Component } from 'react';
-// import Header from '../Header';
+import Instructions from '../Instructions';
 import Image from '../Image';
 import images from '../../images.json';
 
 class Game extends Component {
 
-    state = {
-        images,
-        difficulty: "0",
-        outOf: images.length,
-        currentScore: 0,
-        wins: 0
+    constructor(props) {
+        super(props);
+        this.state = {
+            images,
+            modalShow: true,
+            difficulty: "0",
+            outOf: images.length,
+            currentScore: 0,
+            wins: 0
+        }
     }
 
     setDifficulty = (event) => {
         this.setState({
             difficulty: event.target.value
         }, this.renderDifficulty());
-        console.log(this.state.difficulty);
+        // console.log(this.state.difficulty);
     }
 
     renderDifficulty = () => {
@@ -28,7 +32,6 @@ class Game extends Component {
                 outOf: oneDiffImages.length
             });
         } else if (this.state.difficulty === "2") {
-            console.log('running');
             const twoDiffImages = images.filter(image => image.series.includes('melee') );
             this.setState({
                 images: this.shuffle(twoDiffImages),
@@ -69,7 +72,7 @@ class Game extends Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        console.log(prevState);
+        // console.log(prevState);
         if (prevState.currentScore !== this.state.currentScore) {
             this.checkIfWin();
         }
@@ -77,12 +80,13 @@ class Game extends Component {
             this.renderDifficulty();
         }
         if (prevState.wins !== this.state.wins) {
+            alert("You win!\nYou've won " + this.state.wins + " games.")
             this.resetGame();
         }
     }
 
     handleClick = (id, alt) => {
-        console.log('clicked', id, alt);
+        // console.log(id, alt);
         const clickedImages = this.state.images.map(image => {
             if (image.id === id) {
                 image.clicked === true ?
@@ -112,12 +116,12 @@ class Game extends Component {
     // if image HAS BEEN CLICKED
     badClick(image) {
         // console.log('bad click');
-        alert('You already selected ' + image.alt);
+        alert('You already selected ' + image.alt + ".\nYou lost!");
         this.resetGame();
     }
 
     checkIfWin = () => {
-        console.log(this.state.currentScore, this.state.outOf);
+        // console.log(this.state.currentScore, this.state.outOf);
         if (this.state.currentScore === (this.state.outOf)) {
             this.winGame();
         }
@@ -126,7 +130,7 @@ class Game extends Component {
     // all images HAVE BEEN CLICKED
     winGame() {
         // console.log(this.state.currentScore, this.state.outOf);
-        console.log('win game');
+        // console.log('win game');
         this.setState({
             wins: this.state.wins + 1
         }, this.resetGame());
@@ -134,7 +138,7 @@ class Game extends Component {
 
     // starts game all over again
     resetGame() {
-        console.log('reset game');
+        // console.log('reset game');
         const resetImages = this.state.images.map(image => {
             image.clicked = false;
             // console.log(image.alt, image.clicked);
@@ -152,10 +156,10 @@ class Game extends Component {
                 <header>
                     <div className="container">
                         <div className="parallelograms">
-                            <a className="parallelogram back" href="/" target="_blank">
+                            <a className="parallelogram back" href="http://fkakatie.github.io" target="_blank">
                                 <i className="fas fa-arrow-left"></i>
                             </a>
-                            <a className="parallelogram instructions" href="/" target="_blank">
+                            <a className="parallelogram instructions" href="https://fkakatie.github.io/clicky" target="_blank">
                                 <i className="fas fa-book"></i>
                             </a>
                         </div>
@@ -176,8 +180,8 @@ class Game extends Component {
                         <div className="scorebox">
                             <div className="left"></div>
                             <div className="scores">
-                                <p>Score&nbsp;
-          <span className="arrow">⯇</span>
+                                <p>
+                                    Score&nbsp;<span className="arrow">⯇</span>
                                     <strong>{this.state.currentScore}</strong>/<strong>{this.state.outOf}</strong>
                                     <span className="arrow">⯈</span>
                                 </p>
@@ -188,22 +192,27 @@ class Game extends Component {
                 </header>
                 <section>
                     <div className="container character-container">
-                        {
-                            this.state.images.map(image => {
-                                return (
-                                    <Image
-                                        key={image.id}
-                                        id={image.id}
-                                        src={image.src}
-                                        alt={image.alt}
-                                        handleClick={this.handleClick}
-                                        difficulty={this.state.difficulty}
-                                    />
-                                )
-                            })
+                        {   
+                            this.state.difficulty === "0" ?
+                                <Instructions /> :
+                                this.state.images.map(image => {
+                                    return (
+                                        <Image
+                                            key={image.id}
+                                            id={image.id}
+                                            src={image.src}
+                                            alt={image.alt}
+                                            handleClick={this.handleClick}
+                                            difficulty={this.state.difficulty}
+                                        />
+                                    )
+                                })
                         }
                     </div>
                 </section>
+                {/* <div className="modal">
+                    abc
+                </div> */}
             </div>
         )
     }

@@ -6,6 +6,10 @@ import './components/component.css';
 
 class App extends Component {
 
+  state = {
+    chosen: false
+  }
+
   render() {
     return (
       <div>

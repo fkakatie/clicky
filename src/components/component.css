@@ -16,7 +16,7 @@ strong {
 .container {
     margin: 0 auto;
     width: 1280px;
-    max-width: 98%;
+    max-width: 92%;
 }
 
 /*
@@ -103,6 +103,7 @@ header .container {
 .dropdown select {
     background: #fc0;
     color: #000;
+    width: 100%;
     font-size: 2.5em;
     height: 66px;
     font-weight: bold;
@@ -159,6 +160,13 @@ IMAGE
 ==============================
 */
 
+.character-container {
+    display: flex;
+    padding: 4px 0 4px 0;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
 .character-image {
     background: #333;
     background-image: linear-gradient(to bottom right, #9cc 33%, #63f);
@@ -186,3 +194,137 @@ IMAGE
     cursor: pointer;
 }
 
+/*
+==============================
+INSTRUCTIONS
+==============================
+*/
+
+.instructions-box {
+    width: 100%;
+    background: #fff;
+    color: #000;
+    padding: 20px;
+}
+
+.instructions-box p {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.5em;
+    padding-bottom: 0.5em;
+}
+
+.instructions-box .banner {
+    background: #36f;
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5em 0;
+    position: relative;
+    margin-bottom: 0.5em;
+    border-left: 0.75em solid #69f;
+    border-right: 0.75em solid #69f;
+}
+
+.banner .fas {
+    position: absolute;
+    top: calc(1.5em - 50%);
+    left: 1em;
+}
+
+/*
+==============================
+MEDIA QUERIES
+==============================
+*/
+
+@media screen and (max-width: 1024px) {
+
+    /*
+    ==============================
+    HEADER
+    ==============================
+    */
+  
+    header .container {
+        grid-template-columns: auto 1fr;
+        grid-gap: 8px;
+    }
+
+    .dropbox {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+    }
+
+    .dropdown {
+        width: 80%;
+    }
+
+    .scorebox {
+        justify-self: end;
+    }
+
+    /*
+    ==============================
+    IMAGE
+    ==============================
+    */
+
+    .big {
+        width: 25%;
+        height: 25%;
+    }
+    
+    .medium {
+        width: 20%;
+        height: 20%;
+    }
+    
+    .small {
+        width: 14.5%;
+        height: 14.5%;
+    }
+  
+}
+
+@media screen and (max-width: 560px) {
+
+    /*
+    ==============================
+    HEADER
+    ==============================
+    */
+  
+    .parallelograms .parallelogram {
+        padding: 8px 0.5em;
+    }
+
+    .scorebox,
+    .dropbox {
+        transform: scale(0.8);
+    }
+
+    /*
+    ==============================
+    IMAGE
+    ==============================
+    */
+
+    .big {
+        width: 26%;
+        height: 26%;
+    }
+    
+    .medium {
+        width: 24%;
+        height: 24%;
+    }
+    
+    .small {
+        width: 16.5%;
+        height: 16.5%;
+    }
+  
+}

@@ -3,8 +3,8 @@ body {
 }
 
 .character-container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 4px;
+  display: flex;
   padding: 4px 0 4px 0;
+  flex-flow: row wrap;
+  justify-content: center;
 }
